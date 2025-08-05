@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://helper-htmlform-for-students.onrender.com/form-data">
+        <fieldset>
+            <legend>user details</legend>
+            <label for="first_user_name">first name</label>
+            <input id="first_user_name" type="text" name="first_user_name" placeholder="first name" required
+                pattern=".{2,}" title="Must be at least 2 characters">
+            <label for="last_user_name">last name</label>
+            <input id="last_user_name" type="text" name="last_user_name" placeholder="last name" required
+                pattern=".{2,}" title="Must be at least 2 characters">
+            <label for="user_email">email</label>
+            <input id="user_email" type="email" name="user_email" placeholder="your email">
+            <label for="id_user">your Id</label>
+            <input id="id_user" type="text" name="id_user" placeholder="your ID" required>
+            <label for="phone_user">phone</label>
+            <input id="phone_user" type="tel" name="phone_user" placeholder="your phone" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ticket & Workshops</legend>
+            <label for="ticket_type">Ticket Type:</label>
+            <select name="ticket_type" id="ticket_type" required>
+                <option value="">chose here</option>
+                <option value="standart">Standart</option>
+                <option value="vip">Vip</option>
+                <option value="student">Student</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ticket Type:</legend>
+            <input type="checkbox" name="workshop_web" id="workshop_web" value="workshop_web">
+            <label for="workshop_web">Web Performance</label>
+            <input type="checkbox" name="workshop_access" id="workshop_access" value="workshop_access">
+            <label for="workshop_access">Accessability</label>
+            <input type="checkbox" id="workshop_testing" name="workshop_testing" value="workshop_testing">
+            <label for="workshop_testing">Testing</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Dietary</legend>
+
+            <input type="radio" name="diet_none" id="diet_none" value="none">
+            <label for="diet_none">None</label>
+            <input type="radio" id="diet_vegan" name="diet" value="vegan">
+            <label for="diet_vegan">Vegan</label>
+            <input type="radio" id="diet_Carnibor" name="diet" value="Carnibor">
+            <label for="diet_Carnibor">Carnibor</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment details</legend>
+            <label for="card_number">Card Number:</label>
+            <input type="number" id="card_number" inputmode="numeric" pattern="(\d{4} ?){3,4}"
+                laceholder="1234 5678 9012 3456" required
+                title="Enter a card number with 13 to 19 digits. Spaces are allowed">
+            <label for="expiry_date">Expiration Date</label>
+            <input type="month" id="expiry_date" name="expiry_date" min="?= date('Y-m') ?>" required>
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" pattern="\d{3,4}" inputmode="numeric" placeholder="3 or 4 digits"
+                required title="Enter 3 or 4 digits">
+        </fieldset>
+
+
+
+    </form>
+
+
+</body>
+
+</html>
